@@ -7,7 +7,7 @@ SRC_DIR="$(pwd)"
 TARGET_DIR="$HOME/.config"
 BACKUP_DIR="$HOME/config_backup_$(date +%Y%m%d_%H%M%S)"
 # List of config directories to symlink
-CONFIG_DIRS=("sway" "foot")
+CONFIG_DIRS=("sway" "foot" "alacritty")
 # Create backup directory
 mkdir -p "$BACKUP_DIR"
 
@@ -39,6 +39,7 @@ echo "Installing necessary packages..."
 
 # List of pacman packages to install
 pacman_packages=(
+    "alacritty"
     "dmenu"
     "ttf-nerd-fonts-symbols"
     "ttf-jetbrains-mono-nerd"

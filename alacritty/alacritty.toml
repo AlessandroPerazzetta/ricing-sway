@@ -1,0 +1,34 @@
+[general]
+#import = ["~/.config/alacritty/dracula.toml"]
+import = ["~/.config/alacritty/catpuccin.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 3
+padding.y = 3
+
+decorations = "Buttonless"
+
+opacity = 1
+blur = false
+
+option_as_alt = "Both"
+
+[font]
+# Get available font: fc-list : family | sort -f | grep Nerd
+normal = { family = "JetBrainsMono NF", style ="Regular" }
+bold = { family = "JetBrainsMono NF", style ="Bold" }
+italic = { family = "JetBrainsMono NF", style ="Italic" }
+size = 9
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+blink_interval = 750
+
+[mouse]
+bindings = [
+{ mouse = "Right", action = "Copy" },
+{ mouse = "Right", mods = "Control", action = "Paste" },
+]
