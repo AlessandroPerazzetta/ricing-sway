@@ -1,0 +1,57 @@
+@import "themes/mocha.css";
+* {
+    font-family: JetBrainsMono Nerd Font, FiraCode Nerd Font, monospace;
+    font-size: 10px;
+    border-radius: 2px;
+    margin: 1px;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: @base;
+    color: @text;
+    border-bottom: 2px solid @surface0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @subtext1;
+    border: none;
+    padding: 0 8px;
+}
+#workspaces button.active {
+    background: @surface0;
+    color: @blue;
+}
+#workspaces button:hover {
+    background: @surface1;
+    color: @lavender;
+}
+#workspaces button.urgent {
+    background: @red;
+    color: @crust;
+}
+#workspaces {
+    margin-right: 10px;
+}
+
+#clock, #memory, #cpu, #network, #pulseaudio, #backlight, #custom-power, #tray, #battery {
+    background: @surface0;
+    color: @text;
+    padding: 0 8px;
+    margin: 0 1px;
+}
+
+#battery.charging {
+    color: @green;
+}
+#battery.critical {
+    color: @red;
+}
+
+#custom-power {
+    background: @maroon;
+    color: @crust;
+}

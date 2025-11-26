@@ -1,0 +1,66 @@
+// Place this at ~/.config/waybar/config.jsonc
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": [
+    "sway/workspaces",
+  ],
+  "modules-center": [
+    "tray"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "battery",
+    "backlight",
+    "clock",
+    "custom/power"
+  ],
+  "custom/separator": {
+    "format": "  |  ",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "poweroff",
+    "tooltip": "Power Off"
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "󰍛  {}%",
+    "tooltip": false
+  },
+  "network": {
+    "format": "󰤨  {ifname}: {ipaddr} {essid} {signalStrength}%",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " muted",
+    "tooltip": false,
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}%",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  }
+}
