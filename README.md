@@ -4,6 +4,8 @@
 
 - `sway`
 - `foot`
+- `alacritty`
+- `htop`
 
 ### Installation
 
