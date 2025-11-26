@@ -4,7 +4,7 @@
   "position": "top",
   "height": 30,
   "modules-left": [
-    "sway/workspaces",
+    "sway/workspaces"
   ],
   "modules-center": [
     "tray"
@@ -25,8 +25,8 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "poweroff",
-    "tooltip": "Power Off"
+    "on-click": "wlogout",
+    "tooltip": "Power Menu"
   },
   "clock": {
     "format": "{:%a %d %b %H:%M}",

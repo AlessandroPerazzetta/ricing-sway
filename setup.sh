@@ -40,6 +40,7 @@ echo "Installing necessary packages..."
 # List of pacman packages to install
 pacman_packages=(
     "alacritty"
+    "waybar"
     "dmenu"
     "ttf-nerd-fonts-symbols"
     "ttf-jetbrains-mono-nerd"
@@ -54,3 +55,25 @@ for package in "${pacman_packages[@]}"; do
     echo "Installing $package..."
     sudo pacman -S --noconfirm "$package"
 done
+
+# List of yay packages to install
+yay_packages=(
+    "wlogout"
+)
+
+if ! command -v yay &> /dev/null; then
+    echo "yay not found, installing yay..."
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay || exit
+    makepkg -si --noconfirm
+    cd - || exit
+    rm -rf /tmp/yay
+fi
+
+echo "Installing yay packages..."
+for package in "${yay_packages[@]}"; do
+    echo "Installing $package..."
+    sudo yay -S --noconfirm "$package"
+done
+
+echo "All packages installed successfully!"
