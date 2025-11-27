@@ -41,7 +41,8 @@
   },
   "network": {
     "format": "󰤨  {ifname}: {essid}",
-    "tooltip": "{ipaddr} {signalStrength}%"
+    "tooltip": "{ipaddr} {signalStrength}%",
+    "on-click": "alacritty -e nmtui"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
