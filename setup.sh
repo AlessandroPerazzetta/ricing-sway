@@ -17,7 +17,7 @@ echo "Existing configurations backed up to $BACKUP_DIR/configs_backup.tar.gz"
 
 # Copy new config from source to target
 for dir in "${CONFIG_DIRS[@]}"; do
-    SRC_PATH="$SRC_DIR/$dir"
+    SRC_PATH="$SRC_DIR/.config/$dir"
     TARGET_PATH="$TARGET_DIR/$dir"
     if [ -d "$SRC_PATH" ]; then
         # Remove existing config if it exists
