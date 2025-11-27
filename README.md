@@ -3,9 +3,11 @@
 #### Config files for:
 
 - `sway`
+- `waybar`
 - `foot`
 - `alacritty`
 - `htop`
+
 
 ### Installation
 

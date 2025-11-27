@@ -7,7 +7,7 @@ SRC_DIR="$(pwd)"
 TARGET_DIR="$HOME/.config"
 BACKUP_DIR="$HOME/config_backup_$(date +%Y%m%d_%H%M%S)"
 # List of config directories to symlink
-CONFIG_DIRS=("sway" "foot" "alacritty" "waybar")
+CONFIG_DIRS=("sway" "waybar" "foot" "alacritty" "htop")
 # Create backup directory
 mkdir -p "$BACKUP_DIR"
 

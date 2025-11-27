@@ -19,7 +19,11 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_run
+#set $menu dmenu_run
+set $menu dmenu_run \
+  -fn 'JetBrainsMono NF:size=11' \
+  -nb '#1e1e2e' -nf '#cdd6f4' \
+  -sb '#313244' -sf '#f5e0dc'
 
 ### Output configuration
 set $background /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
