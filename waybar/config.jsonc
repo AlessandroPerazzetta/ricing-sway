@@ -1,4 +1,3 @@
-// Place this at ~/.config/waybar/config.jsonc
 {
   "layer": "top",
   "position": "top",
@@ -34,30 +33,35 @@
   },
   "cpu": {
     "format": "  {usage}%",
-    "tooltip": false
+    "tooltip": "CPU"
   },
   "memory": {
     "format": "󰍛  {}%",
-    "tooltip": false
+    "tooltip": "Memory"
   },
   "network": {
-    "format": "󰤨  {ifname}: {ipaddr} {essid} {signalStrength}%",
-    "tooltip": false
+    "format": "󰤨  {ifname}: {essid}",
+    "tooltip": "{ipaddr} {signalStrength}%"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": " muted",
+    "format-icons": {
+      "default": ["", ""], // Font Awesome 6 or Nerd Font speaker icons
+      "muted": ""
+    },
     "tooltip": false,
     "on-click": "pavucontrol"
   },
   "battery": {
     "format": "{icon}  {capacity}%",
+    "format-icons": [ "", "", "", "", "" ],
     "format-charging": "  {capacity}%",
-    "tooltip": false
+    "tooltip": "Battery"
   },
   "backlight": {
     "format": " {percent}%",
-    "tooltip": false
+    "tooltip": "Backlight"
   },
   "tray": {
     "icon-size": 18,
