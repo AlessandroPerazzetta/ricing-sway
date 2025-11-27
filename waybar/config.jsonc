@@ -14,6 +14,7 @@
     "custom/temps",
     //"temperature#CPU",
     //"temperature#GPU",
+    //"custom/fan_tmp",
     "network",
     "pulseaudio",
     "battery",
@@ -71,6 +72,11 @@
     "critical-threshold": 80,
     "tooltip": true,
     "return-type": "json"
+  },
+  "custom/fan_tmp": {
+    "interval": 5,
+    "exec": "~/.config/waybar/scripts/thinkpad_fan_tmp.sh",
+    "tooltip": " CPU Temp & Fan"
   },
   "network": {
     "interval": 3,

@@ -37,7 +37,7 @@ window#waybar {
     margin-right: 10px;
 }
 
-#clock, #memory, #cpu, #network, #pulseaudio, #backlight, #custom-power, #tray, #battery, #temperature, #custom-temps {
+#clock, #memory, #cpu, #network, #pulseaudio, #backlight, #custom-power, #tray, #battery, #temperature, #custom-temps, #custom-fan_tmp {
     background: @surface0;
     color: @text;
     padding: 0 6px;
