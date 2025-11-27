@@ -11,6 +11,9 @@
   "modules-right": [
     "cpu",
     "memory",
+    "custom/temps",
+    //"temperature#CPU",
+    //"temperature#GPU",
     "network",
     "pulseaudio",
     "battery",
@@ -40,6 +43,34 @@
     "interval": 5,
     "format": "󰍛  {}%",
     "tooltip": "Memory"
+  },
+  // To get right hwmon-path lm_sensors is required and can retrieved with this command:
+  // for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_input}_label 2>/dev/null || echo $(basename ${i%_input})) $(readlink -f $i)"; done
+  /*
+  "temperature#CPU": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/temp1_input",
+    "format": " {temperatureC}°C",
+    "format-icons": ["", "", "", ""],
+    "critical-threshold": 80,
+    "tooltip": true,
+    "tooltip-format": "CPU: {temperatureC}°C"
+  },
+  "temperature#GPU": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/temp2_input",
+    "format": " {temperatureC}°C",
+    "format-icons": ["", "", "", ""],
+    "critical-threshold": 80,
+    "tooltip": true
+  },
+  */
+  "custom/temps": {
+    "interval": 5,
+    "exec": "~/.config/waybar/scripts/thinkpad_temps.sh",
+    "critical-threshold": 80,
+    "tooltip": true,
+    "return-type": "json"
   },
   "network": {
     "interval": 3,
