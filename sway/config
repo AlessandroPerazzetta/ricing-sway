@@ -226,11 +226,11 @@ bindsym $mod+Shift+v exec pavucontrol
 ## Thinkvantage Button = Terminal
 bindsym XF86Launch1 exec $term
 ## Brightness - Uses MOD key because fn won't work
-bindsym $mod+Home exec brightnessctl set 10%+
-bindsym $mod+End exec brightnessctl set 10%-
+bindsym $mod+Home exec brightnessctl -c backlight set +5%
+bindsym $mod+End exec brightnessctl -c backlight set 5%-
 
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 10%+
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
+bindsym --locked XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
 ## Printscreen
 bindsym	Print exec grim
