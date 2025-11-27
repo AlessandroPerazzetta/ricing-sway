@@ -32,17 +32,20 @@
     "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
   },
   "cpu": {
+    "interval": 5,
     "format": "  {usage}%",
     "tooltip": "CPU"
   },
   "memory": {
+    "interval": 5,
     "format": "󰍛  {}%",
     "tooltip": "Memory"
   },
   "network": {
+    "interval": 3,
     "format": "󰤨  {ifname}: {essid}",
     "tooltip": "{ipaddr} {signalStrength}%",
-    "on-click": "alacritty -e nmtui"
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -63,7 +66,10 @@
   },
   "backlight": {
     "format": " {percent}%",
-    "tooltip": "Backlight"
+    "tooltip": "Backlight",
+    "format-icons": ["", ""],
+    "on-scroll-up": "brightnessctl -c backlight set +5%",
+    "on-scroll-down": "brightnessctl -c backlight set 5%-"
   },
   "tray": {
     "icon-size": 18,
