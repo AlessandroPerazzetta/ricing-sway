@@ -51,6 +51,16 @@ window#waybar {
     color: #ffffff; 
 }
 
+#custom-temps.critical {
+  background: @red;
+  color: @crust;
+  font-weight: bold;
+  animation: blink 1s step-end infinite alternate;
+}
+@keyframes blink {
+  to { opacity: 0.5; }
+}
+
 #battery.charging {
     color: @green;
 }
