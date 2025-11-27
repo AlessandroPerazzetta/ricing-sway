@@ -1,7 +1,7 @@
 @import "themes/mocha.css";
 * {
     font-family: JetBrainsMono Nerd Font, FiraCode Nerd Font, monospace;
-    font-size: 10px;
+    font-size: 11px;
     border-radius: 2px;
     margin: 1px;
     box-shadow: none;
@@ -40,7 +40,7 @@ window#waybar {
 #clock, #memory, #cpu, #network, #pulseaudio, #backlight, #custom-power, #tray, #battery {
     background: @surface0;
     color: @text;
-    padding: 0 8px;
+    padding: 0 6px;
     margin: 0 1px;
 }
 
