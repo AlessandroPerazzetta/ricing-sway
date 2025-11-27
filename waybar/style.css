@@ -19,7 +19,7 @@ window#waybar {
     background: transparent;
     color: @subtext1;
     border: none;
-    padding: 0 8px;
+    padding: 0 2px;
 }
 #workspaces button.active {
     background: @surface0;
