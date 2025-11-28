@@ -15,7 +15,10 @@ set $right l
 # Your preferred terminal emulator
 #set $term foot
 set $term alacritty
+set $termux alacritty -e tmux
 #set $term foot tmux
+set $browser brave
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -33,6 +36,9 @@ output * bg $background fill
 # Basics:
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start a terminal with tmux
+    bindsym $mod+t exec $termux
 
     # Kill focused window
     #bindsym $mod+Shift+q kill
@@ -238,5 +244,8 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
 ## Printscreen
 bindsym	Print exec grim
+
+# Applications shortcut
+bindsym $mod+Shift+w exec $browser
 
 include @sysconfdir@/sway/config.d/*
