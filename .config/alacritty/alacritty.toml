@@ -1,27 +1,26 @@
 [general]
-#import = ["~/.config/alacritty/dracula.toml"]
-import = ["~/.config/alacritty/catpuccin.toml"]
+import = ["~/.config/alacritty/themes/purple.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 3
-padding.y = 3
+padding = { x = 2, y = 2 }
 
 decorations = "Buttonless"
 
-opacity = 1
-blur = false
+opacity = 0.86
+blur = true
 
 option_as_alt = "Both"
 
 [font]
 # Get available font: fc-list : family | sort -f | grep Nerd
-normal = { family = "JetBrainsMono NF", style ="Regular" }
-bold = { family = "JetBrainsMono NF", style ="Bold" }
-italic = { family = "JetBrainsMono NF", style ="Italic" }
-size = 9
+normal = { family = "JetBrainsMono NF", style = "Regular" }
+bold = { family = "JetBrainsMono NF", style = "Bold" }
+italic = { family = "JetBrainsMono NF", style = "Italic" }
+bold_italic = { family = "JetBrainsMono NF", style = "Bold Italic" }
+size = 11
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
