@@ -6,6 +6,7 @@ TERM = "xterm-256color"
 
 [window]
 #padding = { x = 1, y = 1 }
+dimensions = { columns = 120, lines = 40 }
 
 decorations = "Buttonless"
 
@@ -31,3 +32,9 @@ bindings = [
 { mouse = "Right", action = "Copy" },
 { mouse = "Right", mods = "Control", action = "Paste" },
 ]
+
+[keyboard]
+bindings = [
+{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
+
