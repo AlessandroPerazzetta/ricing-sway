@@ -10,7 +10,7 @@ dimensions = { columns = 120, lines = 40 }
 
 decorations = "Buttonless"
 
-opacity = 0.86
+opacity = 0.95
 blur = true
 
 option_as_alt = "Both"
